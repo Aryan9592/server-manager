@@ -100,8 +100,8 @@ constexpr const uint64_t ROLLUP_ADVANCE_STATE = 0;
 constexpr const uint64_t ROLLUP_INSPECT_STATE = 1;
 
 static constexpr uint32_t manager_version_major = 0;
-static constexpr uint32_t manager_version_minor = 8;
-static constexpr uint32_t manager_version_patch = 2;
+static constexpr uint32_t manager_version_minor = 9;
+static constexpr uint32_t manager_version_patch = 0;
 static constexpr const char *manager_version_pre_release = "";
 static constexpr const char *manager_version_build = "";
 
@@ -3282,11 +3282,19 @@ where
       passed to the spawned remote cartesi machine
       default: localhost:0
 
+    --version
+      prints the server version number
+
     --help
       prints this message and exits
 
 )",
         name);
+}
+
+/// \brief Prints server_manager version
+static void print_version() {
+    (void) fprintf(stderr, "%d.%d.%d\n", manager_version_major, manager_version_minor, manager_version_patch);
 }
 
 /// \brief Checks if string matches prefix and captures remaninder
@@ -3345,6 +3353,9 @@ int main(int argc, char *argv[]) try {
             ;
         } else if (stringval("--server-address=", argv[i], &server_address)) {
             ;
+        } else if (strcmp(argv[i], "--version") == 0) {
+            print_version();
+            exit(0);
         } else if (strcmp(argv[i], "--help") == 0) {
             help(argv[0]);
             exit(0);

@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated libboost version to 1.81
+- Updated grpc-interfaces
+- Updated machine-emulator-defines
+- Bumped version to 0.9.0
+
+### Added
+- Added \-\-version command line option
 
 ## [0.8.2] - 2023-08-21
 ### Changed
