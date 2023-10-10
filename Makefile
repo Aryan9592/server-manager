@@ -37,8 +37,8 @@ HEALTHCHECK_PROTO := third-party/health.proto
 
 # Docker image settings
 TAG ?= devel
-EMULATOR_TAG ?= 0.15.2
-EMULATOR_REPOSITORY ?= cartesi/machine-emulator
+EMULATOR_TAG ?= feature-rollup-default
+EMULATOR_REPOSITORY ?= ghcr.io/cartesi/machine-emulator
 
 # Mac OS X specific settings
 ifeq ($(UNAME),Darwin)

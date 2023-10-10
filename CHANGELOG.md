@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated libboost version to 1.81
+
 ## [0.8.2] - 2023-08-21
 ### Changed
 - Updated server-manager version to v0.8.2
